@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #02364e;
+}
+
+.game-container {
+  width: 80%;
+  background: white;
+  font-weight: bold;
+  color: #02364e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  text-align: center;
+  line-height: 100px;
+  margin-bottom: 10px;
+  transition: transform 1s, background-color 1s;
+}
+
+.animate {
+  animation: move 3s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.code-editor {
+  margin: 20px 0;
+}
+
+textarea {
+  width: 85%;
+  height: 300px; /* Barcha bosqichlarda bir xil balandlik */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: none; /* Foydalanuvchi o'lchamini o'zgartira olmasligi uchun */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(35, 35, 199);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+.back-btn {
+  background-color: red;
+}
+
+.next-btn {
+  background-color: rgb(7, 212, 7);
+}
+
+.back-btn:hover {
+  padding: 8px 15px;
+  background-color: #e70831;
+}
+
+#submit-btn:hover {
+  padding: 9px 17px;
+  background-color: #0056b3;
+  color: yellow;
+}
+
+.next-btn:hover {
+  padding: 8px 15px;
+  background-color: #119639;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}

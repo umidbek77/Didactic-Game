@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Authentication</title>
+    <link rel="stylesheet" href="./style-login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Welcome to the Game!</h2>
+
+      <!-- Login Form -->
+      <div id="login">
+        <h3>Login</h3>
+        <input type="email" id="login-email" placeholder="Email" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <button onclick="loginUser()">Login</button>
+        <p>
+          Not registered yet?
+          <a href="#" onclick="showRegisterForm()">Register here</a>
+        </p>
+      </div>
+
+      <!-- Registration Form -->
+      <div id="register" style="display: none">
+        <h3>Register</h3>
+        <input type="text" id="register-username" placeholder="Username" />
+        <input type="email" id="register-email" placeholder="Email" />
+        <input type="password" id="register-password" placeholder="Password" />
+        <button onclick="registerUser()">Register</button>
+        <p>
+          Already have an account?
+          <a href="#" onclick="showLoginForm()">Login here</a>
+        </p>
+      </div>
+
+      <div id="message"></div>
+    </div>
+
+    <script src="./applogin.js"></script>
+  </body>
+</html>
