@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Progress Bar Animation</title>
+    <link rel="website icon" type="png" href="/images/global-learning.png" />
     <style>
       * {
         margin: 0;
@@ -54,11 +55,16 @@
         display: none;
       }
 
+      /* btn-container */
+      .btn-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
       /* buttonstyle */
       #certificateButton {
         position: absolute;
         top: 100px;
-        right: 740px;
         padding: 10px 15px;
         background-color: #4caf50;
         color: white;
@@ -66,13 +72,21 @@
         border-radius: 5px;
         cursor: pointer;
       }
+
+      /* Media query code */
+
+      /* @media (max-width: 1350px) {
+        
+      } */
     </style>
   </head>
   <body>
-    <button id="certificateButton">Sertifikat</button>
     <div class="congratulations" id="congratsMessage">
       Tabriklaymiz! Siz barcha shartlarni to'g'ri bajardingiz! <br />
       Hamda HTML Kursimizning maxsus Sertifikatiga ega bo'ldingiz!
+    </div>
+    <div class="btn-container">
+      <button id="certificateButton">Sertifikat</button>
     </div>
     <div class="progress-container">
       <div class="progress-bar" id="progressBar">0%</div>
@@ -294,32 +308,6 @@
           console.log("Musiqa ijro etishda xato:", error);
         });
       };
-
-      // Serftikat kodi
-      // const certificateButton = document.getElementById("certificateButton");
-      // certificateButton.addEventListener("click", async function () {
-      //   const name = prompt("Ism va familiyangizni kiriting:");
-      //   if (name) {
-      //     const url = "/sertifikat/sertifikat5.pdf"; // PDF shablon yo'li
-      //     const existingPdfBytes = await fetch(url).then((res) =>
-      //       res.arrayBuffer()
-      //     );
-      //     const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
-
-      //     const form = pdfDoc.getForm();
-      //     const nameField = form.getTextField("Text1"); // "name" bu PDF shablonidagi maydon nomi
-      //     nameField.setText(name); // Foydalanuvchi kiritgan ismni joylashtirish
-
-      //     const pdfBytes = await pdfDoc.save();
-
-      //     // Yuklab olish uchun faylni yaratish
-      //     const blob = new Blob([pdfBytes], { type: "application/pdf" });
-      //     const link = document.createElement("a");
-      //     link.href = URL.createObjectURL(blob);
-      //     link.download = `${name}sertifikat5.pdf`; // Fayl nomi
-      //     link.click();
-      //   }
-      // });
 
       const certificateButton = document.getElementById("certificateButton");
 
