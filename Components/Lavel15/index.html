@@ -74,10 +74,75 @@
       }
 
       /* Media query code */
+      @media (max-width: 320px) and (max-width: 418px) {
+        .progress-container {
+          width: 95%; /* Juda kichik ekranda progress bar kengaytiriladi */
+          margin: 10px auto; /* Markazda joylashishi uchun */
+        }
+        .progress-bar {
+          height: 25px; /* Progress bar balandligini kichikroq qilish */
+          font-size: 0.8em; /* Matnni kichikroq qilish */
+        }
+        .congratulations {
+          font-size: 1.2em; /* Matnni kichikroq qilish */
+          margin-top: 80px; /* Yuqoridagi bo'shliqni kamaytirish */
+        }
+        #certificateButton {
+          top: 50px; /* Tugma joylashuvi */
+          font-size: 0.7em; /* Tugmadagi matnni kichikroq qilish */
+          padding: 6px 8px; /* Tugma kattaligini moslashtirish */
+        }
+      }
 
-      /* @media (max-width: 1350px) {
-        
-      } */
+      @media (min-width: 481px) and (max-width: 768px) {
+        .progress-container {
+          width: 85%;
+          margin: 30px auto;
+        }
+        .congratulations {
+          font-size: 1.8em;
+          margin-top: 120px;
+        }
+        #certificateButton {
+          top: 80px;
+          font-size: 0.9em;
+          padding: 9px 12px;
+        }
+      }
+
+      /* Planshetlar (768px - 1024px) */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .progress-container {
+          width: 80%;
+          margin: 40px auto;
+        }
+        .congratulations {
+          font-size: 2em;
+          margin-top: 140px;
+        }
+        #certificateButton {
+          top: 90px;
+          font-size: 1em;
+          padding: 10px 15px;
+        }
+      }
+
+      /* Katta ekranlar (1366px va undan kattasi) */
+      @media (min-width: 1366px) {
+        .progress-container {
+          width: 70%;
+          margin: 50px auto;
+        }
+        .congratulations {
+          font-size: 2.5em;
+          margin-top: 150px;
+        }
+        #certificateButton {
+          top: 100px;
+          font-size: 1.2em;
+          padding: 12px 18px;
+        }
+      }
     </style>
   </head>
   <body>
